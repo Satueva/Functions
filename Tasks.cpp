@@ -1,7 +1,7 @@
-#include <iostream>
+п»ї#include <iostream>
 
 int sum(int num1, int num2) {
-	// int result = num1 + num2; ( не обязательно )
+	// int result = num1 + num2; ( РЅРµ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ )
 	// return result;
 	return num1 + num2;
 }
@@ -12,14 +12,14 @@ void hi() {
 }
 
 
-// Функция для вывода массива в консоль
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹РІРѕРґР° РјР°СЃСЃРёРІР° РІ РєРѕРЅСЃРѕР»СЊ
 void print_arr(int arr[], const int length) {
 	for (int i = 0; i < length; i++)
 		std::cout << arr[i] << ' ';
 	std::cout << std::endl;
 }
 
-void mult_x5(int num) {  // num - это параметр функции
+void mult_x5(int num) {  // num - СЌС‚Рѕ РїР°СЂР°РјРµС‚СЂ С„СѓРЅРєС†РёРё
 	num *= 5;
 }
 //void arr_x5(int arr_el) {
@@ -48,14 +48,14 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	int n, m;
 
-	// Создание и вызов функций 
-	hi(); // void функция
+	// РЎРѕР·РґР°РЅРёРµ Рё РІС‹Р·РѕРІ С„СѓРЅРєС†РёР№ 
+	hi(); // void С„СѓРЅРєС†РёСЏ
 
-	std::cout << "Введите два числа: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р°: ";
 		std::cin >> n >> m;
 	std::cout << sum(n, m) << std::endl;
 
-	// Функции работающие с массивами 
+	// Р¤СѓРЅРєС†РёРё СЂР°Р±РѕС‚Р°СЋС‰РёРµ СЃ РјР°СЃСЃРёРІР°РјРё 
 	const int size = 5;
 	int arrrrr[size]{ 8, 16, 42, 9, 11 }; 
 	print_arr(arrrrr, size);
@@ -64,25 +64,24 @@ int main() {
 	print_arr(arrrrr, size);
 
 	n = 7;
-	mult_x5(n);  // n -  эо аргент функции 
+	mult_x5(n);  // n -  СЌРѕ Р°СЂРіРµРЅС‚ С„СѓРЅРєС†РёРё 
 	std::cout << "n = " << n << std::endl;
 
 
-	// Задача 1. Индексы положительных элементов массива.
-	std::cout << "\nМассив: \n";
+	// Р—Р°РґР°С‡Р° 1. РРЅРґРµРєСЃС‹ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°.
+	std::cout << "\nРњР°СЃСЃРёРІ: \n";
 	const int size1 = 5;
 	int arr1[size1]{ 16, -4, 7, 0, 42 };
 	print_arr(arr1, size1);
-	std::cout << "Индексы положительных элементов:\n";
+	std::cout << "РРЅРґРµРєСЃС‹ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ:\n";
 	positive_elements(arr1, size1);
 	std::cout << '\n';
 
-	// Задача 2. факториал.
-	std::cout << "\nВведите число: ";
+	// Р—Р°РґР°С‡Р° 2. С„Р°РєС‚РѕСЂРёР°Р».
+	std::cout << "\nР’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ";
 	std::cin >> n;
 
 	std::cout << n << "! = " << factorial(n) << std::endl;
-	int m;
 
 
 
